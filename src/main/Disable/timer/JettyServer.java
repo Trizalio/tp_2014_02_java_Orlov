@@ -2,7 +2,7 @@ package timer;
 
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
-import templater.PageGenerator;
+import frontend.PageGenerator;
 import templater.Test;
 
 import javax.servlet.ServletException;

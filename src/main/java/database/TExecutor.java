@@ -1,6 +1,6 @@
-package executor;
+package database;
 
-import handlers.TResultHandler;
+import database.TResultHandler;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

@@ -1,8 +1,8 @@
-package dao;
+package database.dao;
 
-import dataSets.UsersDataSet;
-import executor.TExecutor;
-import handlers.TResultHandler;
+import database.dataSets.UsersDataSet;
+import database.TExecutor;
+import database.TResultHandler;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

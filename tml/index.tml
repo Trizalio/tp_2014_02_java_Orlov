@@ -12,6 +12,7 @@
     <p id="status">${status}</p>
     <p><a href="/login">Авторизация</a></p>
     <p><a href="/register">Регистрация</a></p>
+    <p><a href="/game">Игра</a></p>
 
     <img src="jetty-logo-80x22.png"/>
 

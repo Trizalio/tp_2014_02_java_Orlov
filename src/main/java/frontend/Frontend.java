@@ -6,7 +6,6 @@ import services.AccountService;
 import messageSystem.MessageSystem;
 import messageSystem.Subscriber;
 import messageSystem.Address;
-import templater.PageGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +30,8 @@ public class Frontend extends HttpServlet implements Subscriber, Runnable{
 
     private static final String STATUS_NAME = "status";
     private static final String INFO_404 = "Указанный адрес не найден, Вы возвращены на главную";
-    private static final String REFRESH_TIME = "500";
+    private static final String INFO_NO_ACCESS = "Авторизуйтесь, чтобы войти в игру";
+    private static final String REFRESH_TIME = "1000";
 
     private Address address;
     private MessageSystem messageSystem;
@@ -114,6 +114,7 @@ public class Frontend extends HttpServlet implements Subscriber, Runnable{
             pageVariables.put("refreshPeriod", REFRESH_TIME);
             response.getWriter().println(PageGenerator.getPage("game.tml", pageVariables));
         }else{
+            getSession(request.getSession().getId()).setUserMessage(INFO_NO_ACCESS);
             response.sendRedirect("/index");
         }
     }
